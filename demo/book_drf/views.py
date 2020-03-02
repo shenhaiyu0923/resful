@@ -21,5 +21,5 @@ class Book(View):
         # 查询所有图书对象
 
         book = BookInfo.objects.get(id=1)
-        ser = BookSerializer(book)#查询单个
+        ser = BookSerializer(book)##查询单个
         return JsonResponse(ser.data,safe=False,json_dumps_params={'ensure_ascii':False})
