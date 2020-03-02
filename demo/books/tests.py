@@ -41,6 +41,7 @@ def bookdel():#查询一个图书
     print(r.json())
     return r
 
+
 # books()#查询所有图书
 # booksadd()#增加图书
 # bookone()#查询一个图书
