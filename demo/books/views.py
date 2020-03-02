@@ -118,4 +118,4 @@ class BookView(View):
                 'is_delete': book.is_delete,
             })
 
-
+#
