@@ -18,7 +18,7 @@ class Books(View):
 class Book(View):
 
     def get(self,request):
-        # 查询所有图书对象
+        #  查询所有图书对象
 
         book = BookInfo.objects.get(id=1)
         ser = BookSerializer(book)##查询单个
