@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.3 on win32)" generated="20190821 13:54:43.949" rpa="false">
+<suite id="s1" name="Ceshi" source="C:\project\c_project\RF\ceshi.robot">
+<test id="s1-t1" name="case001">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>RF测试用例1</arg>
+</arguments>
+<status status="PASS" starttime="20190821 13:54:43.981" endtime="20190821 13:54:43.981"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>RF测试用例2</arg>
+</arguments>
+<status status="PASS" starttime="20190821 13:54:43.981" endtime="20190821 13:54:43.996"></status>
+</kw>
+<status status="PASS" starttime="20190821 13:54:43.981" endtime="20190821 13:54:43.996" critical="yes"></status>
+</test>
+<test id="s1-t2" name="case002">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>RF测试用例11</arg>
+</arguments>
+<status status="PASS" starttime="20190821 13:54:43.996" endtime="20190821 13:54:43.996"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>RF测试用例22</arg>
+</arguments>
+<status status="PASS" starttime="20190821 13:54:43.996" endtime="20190821 13:54:43.996"></status>
+</kw>
+<status status="PASS" starttime="20190821 13:54:43.996" endtime="20190821 13:54:43.996" critical="yes"></status>
+</test>
+<test id="s1-t3" name="case003">
+<kw name="${var)">
+<arguments>
+<arg>RF测试用例123</arg>
+</arguments>
+<msg timestamp="20190821 13:54:43.996" level="FAIL">No keyword with name '${var)' found.</msg>
+<status status="FAIL" starttime="20190821 13:54:43.996" endtime="20190821 13:54:43.996"></status>
+</kw>
+<status status="FAIL" starttime="20190821 13:54:43.996" endtime="20190821 13:54:43.996" critical="yes">No keyword with name '${var)' found.</status>
+</test>
+<status status="FAIL" starttime="20190821 13:54:43.949" endtime="20190821 13:54:43.996"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1">Critical Tests</stat>
+<stat pass="2" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="1" id="s1" name="Ceshi">Ceshi</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

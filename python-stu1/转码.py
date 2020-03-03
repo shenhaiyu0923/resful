@@ -1,0 +1,2 @@
+test1='\u7ec4\u540d\u4e0d\u5b58\u5728\uff0c\u5220\u9664\u5931\u8d25'
+print ("123")

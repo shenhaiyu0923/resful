@@ -1,0 +1,54 @@
+﻿1.安装adb,请自行安装
+2.安装atx最新版:
+pip install --pre -U uiautomator2
+
+3.手机接到电脑上之后,执行下面代码初始化手机
+python -m uiautomator2 init
+4.ATX Weditor是一个python库，命令行安装:
+pip install --pre weditor
+5.启动weditor:
+python -m weditor
+6.点击connect
+7.点击Dump Hierarchy
+以上步骤为安装配置步骤
+
+
+
+#测试代码,请先安装网易云音乐
+import uiautomator2 as u2
+import time
+d = u2.connect("192.168.199.235")
+d.set_fastinput_ime(True)
+s = d.session("com.netease.cloudmusic")
+time.sleep(5)
+d.xpath('//*[@resource-id="com.netease.cloudmusic:id/aus"]/android.widget.LinearLayout[1]/android.widget.FrameLayout[2]/android.widget.ImageView[1]').click()
+
+d.xpath('//*[@text="グルグル (转来转去)"]').click()
+
+d.click(x, y)点击屏幕
+
+d.double_click(x, y)连按两次
+
+d.long_click(x, y, 0.5)长按0.5s（默认）
+
+d.swipe(sx, sy, ex, ey, 0.5)滑动
+
+d.swipe_ext("right") # 屏幕右滑，4选1 "left", "right", "up", "bottom"
+d.swipe_ext("right", scale=0.9) # 默认0.9, 滑动距离为屏幕宽度的90%
+d.swipe_ext("right", box=(0, 0, 100, 100)) # 在 (0,0) -> (100, 100) 这个区域做滑动
+
+d.drag(sx, sy, ex, ey)拖动
+d.drag(sx, sy, ex, ey, 0.5) # swipe for 0.5s(default)拖动0.5秒（默认）
+
+d.touch.down(10, 10) # 模拟按下
+time.sleep(.01) # down 和 move 之间的延迟，自己控制
+d.touch.move(15, 15) # 模拟移动
+d.touch.up() # 模拟抬起
+
+＃冻结旋转
+d.freeze_rotation()
+＃取消冻结旋转
+d.freeze_rotation(False)
+
+d.open_notification()#打开通知栏
+d.open_quick_settings()#打开快速设置
