@@ -1,0 +1,7 @@
+pytest -s tc --html = report1.html
+
+pytest -s tc -m torun --html = report1.html     指定标签执行加-m ，torun为自定义名字   要执行的用例加装饰器@pytest.mark.torun
+
+pytest -s -k tc006001 tc  --html=report1.html     指定标签执行用例-k
+
+pytest -k test_eval2 tc  --html=report1.html
