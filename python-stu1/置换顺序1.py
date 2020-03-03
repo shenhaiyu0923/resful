@@ -1,4 +1,4 @@
-def test1(num,list1):
+def atest(num,list1):
     n=num%len(list1)
     list2=[]
     for i in range(-n, 0):
@@ -10,6 +10,6 @@ def test1(num,list1):
 
 while True:
     a = input('请输入循环次数：')
-    test1(int(a),[1,2,3,4,5,6,7])
+    atest(int(a),[1,2,3,4,5,6,7])
 
-#test1(10000,[1,2,3,4,5,6,7])
+

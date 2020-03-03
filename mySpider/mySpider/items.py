@@ -8,7 +8,10 @@
 import scrapy
 
 
-class MyspiderItem(scrapy.Item):
+class MyspiderItem(scrapy.Item):#数据建模
     # define the fields for your item here like:
     # name = scrapy.Field()
+    name = scrapy.Field()
+    title = scrapy.Field()
+    desc = scrapy.Field()
     pass
