@@ -3,7 +3,7 @@ from pymongo import MongoClient
 
 
 # 创建数据库链接对象
-client = MongoClient('192.168.153.136', 27017)
+client = MongoClient('192.168.153.137', 27017)
 
 # 选择一个数据库
 #db = client['admin']

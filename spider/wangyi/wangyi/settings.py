@@ -67,7 +67,7 @@ NEWSPIDER_MODULE = 'wangyi.spiders'
 ITEM_PIPELINES = {
    'wangyi.pipelines.WangyiPipeline': 300,
    'wangyi.pipelines.WangyiSimplePipeline': 301,
-   #'wangyi.pipelines.MongoPipeline': 302,
+   'wangyi.pipelines.MongoPipeline': 302,
 }
 #ITEM_PIPELINES = {
 #    'wangyi.pipelines.WangyiPipeline': 300,
