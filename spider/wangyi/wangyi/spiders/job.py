@@ -26,7 +26,7 @@ class JobSpider(scrapy.Spider):
                 item['address'] = node.xpath('./td[5]/text()').extract_first()
                 item['num'] = node.xpath('./td[6]/text()').extract_first().strip()
                 item['date'] = node.xpath('./td[7]/text()').extract_first()
-                # print(item)
+                print(item)
                 # yield item
 
                 # 构建详情页面的请求
@@ -42,7 +42,6 @@ class JobSpider(scrapy.Spider):
         # 判断终止条件
         if part_url != 'javascript:void(0)':
             next_url = response.urljoin(part_url)
-            print(next_url)
             yield scrapy.Request(
                 url = next_url,
                 callback=self.parse
@@ -55,6 +54,6 @@ class JobSpider(scrapy.Spider):
         # 提取剩余字段数据
         item['duty'] = response.xpath('/html/body/div[2]/div[2]/div[1]/div/div/div[2]/div[1]/div/text()').extract()
         item['require'] = response.xpath('/html/body/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/text()').extract()
-        print(item['duty'],item['require'])
+        #print(item['duty'],item['require'])
         # 返回给引擎
         yield item

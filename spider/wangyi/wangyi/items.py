@@ -22,3 +22,15 @@ class WangyiItem(scrapy.Item):
 
     duty = scrapy.Field()
     require = scrapy.Field()
+
+class WangyiSimpleItem(scrapy.Item):
+    # define the fields for your item here like:
+    name = scrapy.Field()
+    link = scrapy.Field()
+    depart = scrapy.Field()
+    category = scrapy.Field()
+    type = scrapy.Field()
+    address = scrapy.Field()
+    num = scrapy.Field()
+    date = scrapy.Field()
+
