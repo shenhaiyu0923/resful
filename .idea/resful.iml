@@ -2,12 +2,12 @@
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/demo" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web_1/demo" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/mySpider" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/python-stu1/数据库" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/spider/mySpider" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.6" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.6 (env1)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">
@@ -19,7 +19,6 @@
     </option>
   </component>
   <component name="TestRunnerService">
-    <option name="projectConfiguration" value="pytest" />
     <option name="PROJECT_TEST_RUNNER" value="pytest" />
   </component>
 </module>
