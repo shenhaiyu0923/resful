@@ -1,0 +1,10 @@
+创建爬虫项目
+scrapy startproject myspider
+创建爬虫文件
+scrapy genspider <爬虫名字> <允许爬取的域名>
+    cd myspider
+    scrapy genspider itcast itcast.cn
+运行爬虫
+scrapy crawl itcast
+
+scrapy crawl job  --nolog

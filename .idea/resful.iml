@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/spider/mySpider" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/a_web/demo" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/a_web/june" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/spider/wangyi" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.6" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
