@@ -1,10 +1,3 @@
-import os
-import subprocess
-#os.system("cmd")
+a=16807540
 
-
-os.Popen
-subprocess.Popen
-
-
-
+print(a%16)

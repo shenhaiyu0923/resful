@@ -42,6 +42,5 @@ class King(object):
 if __name__ == '__main__':
     #king = King("人生苦短，及时行乐")好
     word = input('请输入:')
-    #word = sys.argv[1]
     king = King(word)
     king.run()

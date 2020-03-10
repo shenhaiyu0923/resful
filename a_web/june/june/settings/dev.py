@@ -134,4 +134,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 from django.db import connection
-CURSOR = connection.cursor()
+cursor = connection.cursor()

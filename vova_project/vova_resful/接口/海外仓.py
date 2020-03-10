@@ -6,7 +6,7 @@ import threading
 '''
 1632818
 '''
-def biaozhuncang():#钻石号
+def biaozhuncang():#普通仓
     data={
         "sku_id": 4559981,
         "operate_type":"fix_data",
@@ -22,7 +22,7 @@ def haiwaicang():#海外仓
         "sku_id": 4559981,
         "operate_type":"fix_data",
         "comment":"test",
-        "change_amount":"-0"
+        "change_amount":"+3"
     }
     r=requests.post('http://api-t6.vova.com/v1/notify/changeFbvStorage',data=data)
     pprint.pprint(r.json())

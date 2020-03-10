@@ -11,5 +11,5 @@ if __name__=='__main__':
                  ])
 
     #pytest tc -s --html=report1.html
-    #py.test test_class.py --resultlog =./ log / log.txt
+    #pytest test_class.py --resultlog =./log/log.txt
 

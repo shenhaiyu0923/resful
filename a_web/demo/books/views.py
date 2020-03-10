@@ -111,7 +111,8 @@ class BookView(View):
         except:
             return JsonResponse({'error': '错误信息'}, status=400)
 
-        book.is_delete=True
+        book.is_delete=True #逻辑删除
+        #book.delete()  # 物理删除
         book.save()
         return JsonResponse({
                 'id': book.id,

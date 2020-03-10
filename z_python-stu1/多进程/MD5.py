@@ -10,9 +10,10 @@ def encrypt_md5(s):
     m5=new_md5.hexdigest()
 
     #再次使用base64加密
-    p = m5.encode("utf-8")
-    p = base64.b64encode(p)  # 被编码的参数必须是二进制数据
-    return m5,p
+    #p = m5.encode("utf-8")
+    #p = base64.b64encode(p)  # 被编码的参数必须是二进制数据
+    #return m5,p
+    return m5
 # 调用
 if __name__ == '__main__':
-    print(encrypt_md5('admin'))
+    print(encrypt_md5('111111'))
