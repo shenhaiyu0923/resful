@@ -11,3 +11,7 @@ scrapy crawl job  --nolog
 
 创建crawl爬虫
 scrapy genspider -t crawl tencent_crawl tencent.com
+
+scrapy crawl tencent_crawl  --nolog
+
+scrapy crawl movie  --nolog

@@ -39,18 +39,22 @@ class WangyiSimplePipeline(object):
         if spider.name == 'job_simple':
             self.file.close()
 
-# class MongoPipeline(object):
-#
-#     def open_spider(self, spider):
-#         self.client = MongoClient('127.0.0.1', 27017)
-#         self.db = self.client['itcast']
-#         self.col = self.db['wangyi']
-#
-#     def process_item(self, item, spider):
-#         data = dict(item)
-#         self.col.insert(data)
-#
-#         return item
-#
-#     def close_spider(self, spider):
-#         self.client.close()
+class MongoPipeline(object):
+
+    def open_spider(self, spider):
+        self.client = MongoClient('192.168.153.137', 27017)
+        self.db = self.client['itcast']#数据库
+        self.col = self.db['wangyi']#集合
+        #self.col.insert({"class":"python37"})
+        print("=" * 100)
+
+    def process_item(self, item, spider):
+        data = dict(item)
+        self.col.insert(data)
+
+        return item
+
+    def close_spider(self, spider):
+        self.client.close()
+
+#  scrapy crawl job_simple --nolog
