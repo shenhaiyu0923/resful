@@ -1,11 +1,9 @@
 from django.http import JsonResponse
 from book_drf.serializer import BookSerializer
 from books.models import BookInfo
-from rest_framework.views import APIView
-from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework.generics import GenericAPIView
-# Create your views here.
+
 
 class Books(GenericAPIView):
     queryset = BookInfo.objects.all() #指定当前类视图使用的查询集数据
