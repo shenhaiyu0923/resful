@@ -1,14 +1,10 @@
 
-import json
-
-from django.http import JsonResponse, HttpRequest
-from django.shortcuts import render
 from rest_framework.generics import GenericAPIView,ListCreateAPIView,RetrieveUpdateDestroyAPIView
 from rest_framework.response import Response
-
+from books.models import BookInfo
 # Create your views here.
 from book_drf.serializer import BookSerialzier
-from books.models import BookInfo
+
 
 
 class Books(ListCreateAPIView):
@@ -28,8 +24,3 @@ class Book(GenericAPIView):
         ser = BookSerialzier(book)
 
         return Response(ser.data)
-
-
-
-
-

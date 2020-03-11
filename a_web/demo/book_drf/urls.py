@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from book_drf import apiview_view, genericapiview_view, mixin_view
+from book_drf import apiview_view, genericapiview_view, mixin_view, childmixin_view
 from  . import  views
 urlpatterns = [
     # url(r'^books_drf$', views.Books.as_view()),
@@ -15,7 +15,11 @@ urlpatterns = [
     # url(r'^book_drf/(?P<pk>\d+)$', genericapiview_view.Book.as_view()),
     # url(r'^books_drf/(?P<pk>\d+)$', genericapiview_view.BookDRFView.as_view()),
 
-    url(r'^books_drf$', mixin_view.Books.as_view()),
-    url(r'^book_drf/(?P<pk>\d+)$', mixin_view.Book.as_view()),
-    url(r'^books_drf/(?P<pk>\d+)$', mixin_view.BookDRFView.as_view()),
+    # url(r'^books_drf$', mixin_view.Books.as_view()),
+    # url(r'^book_drf/(?P<pk>\d+)$', mixin_view.Book.as_view()),
+    # url(r'^books_drf/(?P<pk>\d+)$', mixin_view.BookDRFView.as_view()),
+
+    url(r'^books_drf$', childmixin_view.Books.as_view()),
+    url(r'^book_drf/(?P<pk>\d+)$', childmixin_view.Book.as_view()),
+    url(r'^books_drf/(?P<pk>\d+)$', childmixin_view.BookDRFView.as_view()),
 ]
