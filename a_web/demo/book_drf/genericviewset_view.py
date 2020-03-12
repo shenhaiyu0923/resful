@@ -1,12 +1,14 @@
 from django.http import JsonResponse
-from rest_framework.viewsets import ViewSet
+from rest_framework.viewsets import ViewSet, GenericViewSet
 from rest_framework.response import Response
 from book_drf.serializer import BookSerializer
 from books.models import BookInfo
 from rest_framework.generics import GenericAPIView,ListCreateAPIView,RetrieveUpdateDestroyAPIView
 from rest_framework.mixins import CreateModelMixin,ListModelMixin,RetrieveModelMixin,UpdateModelMixin,DestroyModelMixin
 
-class Books(ViewSet):
+class Books(GenericViewSet):
+    queryset = BookInfo.objects.all()  # 指定当前类视图使用的查询集数据
+    serializer_class = BookSerializer  # 指定当前类视图使用的序列化器
     def list(self, request):
         # 1、查询所有图书对象
         books = BookInfo.objects.all()
@@ -29,10 +31,12 @@ class Books(ViewSet):
         # 4、返回结果
         return Response(ser.data)
 
-class BookDRFView(ViewSet):
+class BookDRFView(GenericViewSet):
     """
         获取单一和更新和删除
     """
+    queryset = BookInfo.objects.all()  # 指定当前类视图使用的查询集数据
+    serializer_class = BookSerializer  # 指定当前类视图使用的序列化器
     def update(self, request, pk):
         # 1、获取前端数据
         # data = request.body.decode()
