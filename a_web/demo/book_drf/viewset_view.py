@@ -71,7 +71,7 @@ class BookDRFView(ViewSet):
 
         return Response(ser.data)
 
-    def Retrieve(self,request,pk):
+    def retrieve(self,request,pk):
         book=BookInfo.objects.get(id=pk)
 
         ser=BookSerializer(book)
