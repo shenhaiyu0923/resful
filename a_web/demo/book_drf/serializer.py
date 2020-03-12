@@ -13,7 +13,7 @@ class HeroInfoSerialzier(serializers.Serializer):
 class BookSerializer(serializers.Serializer):
     # 序列化返回字段
     id = serializers.IntegerField(read_only=True)
-    btitle = serializers.CharField(max_length=20, min_length=2)
+    btitle = serializers.CharField(max_length=20, min_length=2,help_text='书名')
     bread = serializers.IntegerField(max_value=100, min_value=2)
     # btitle = serializers.CharField(max_length=20, min_length=5, write_only=False)
     # bread = serializers.IntegerField(max_value=100, min_value=5,read_only=False)

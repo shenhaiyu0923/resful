@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'books',
+    'rest_framework',    # 在此处注册 app
+    'django_filters',  # 需要注册应用，
 ]
 
 MIDDLEWARE = [
@@ -104,9 +106,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-hans'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
@@ -138,3 +140,29 @@ STATIC_URL = '/static/'
 #         },
 #     }
 # }
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (#认证
+        'rest_framework.authentication.BasicAuthentication',   # 基本认证
+        'rest_framework.authentication.SessionAuthentication',  # session认证
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (#权限
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_THROTTLE_CLASSES': (#用户限流
+        'rest_framework.throttling.AnonRateThrottle',
+        'rest_framework.throttling.UserRateThrottle'
+    ),
+    'DEFAULT_THROTTLE_RATES': {#指定限流次数
+        'anon': '100/day',#匿名用户
+        'user': '100/day'#登陆用户
+    },
+    'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',),# 过滤
+
+    'EXCEPTION_HANDLER': ('book_drf.utils.exception_handler'),# 配置数据库异常处理
+
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.AutoSchema',# 自动生成文档
+
+}
+
