@@ -14,6 +14,13 @@ class PageNum(PageNumberPagination):
     max_page_size = 4
 
 class Books(ModelViewSet):
+    """
+    get:
+    返回所有图书信息.
+
+    post:
+    新建图书.
+    """
     queryset = BookInfo.objects.all()  # 指定当前类视图使用的查询集数据
     serializer_class = BookSerializer  # 指定当前类视图使用的序列化器
 
