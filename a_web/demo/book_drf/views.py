@@ -10,6 +10,13 @@ from books.models import BookInfo
 
 class Books(View):
 
+    def get(self,request):
+        # 1、查询所有图书对象
+        books = BookInfo.objects.all()
+
+        ser= BookSerializer(books,many=True)
+
+        return JsonResponse(ser.data, safe=False)
     def post(self, request):
         # 1、获取前端数据
         data = request.body.decode()

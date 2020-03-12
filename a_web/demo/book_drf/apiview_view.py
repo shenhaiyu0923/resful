@@ -1,4 +1,6 @@
 from django.http import JsonResponse
+from django.views import View
+
 from book_drf.serializer import BookSerializer
 from books.models import BookInfo
 from rest_framework.views import APIView
