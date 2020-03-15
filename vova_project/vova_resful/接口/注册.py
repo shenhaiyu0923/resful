@@ -4,8 +4,8 @@ from time import sleep,ctime
 import threading
 
    
-def test_reg():#
-    headers={"User-Agent":"Dalvik/2.1.0 (Linux; U; Android 9; vivo X21A Build/PKQ1.180819.001) [,1b8ba1836067773c,1578710372871-2164943907535087689] lq-App Vova android"}
+def ztest_reg():#
+    headers={"User-Agent":"Dalvik/2.1.0 (Linux; U; Android 9; vivo X21A Build/PKQ1.180819.001) [,1b8ba1836067773c,1578710372871-2164943907535087689] lq-App Vova 2.59.0 android"}
     params={
         "timezone":"Asia/Shanghai",
         "access_token":"",
@@ -36,7 +36,7 @@ def test_reg():#
         "req_time":"1579656832",
         "sign":"e732d2dd9da876a1abd4537ca472d7bb",
         "type":"",
-        "username":"t0000002@163.com"
+        "username":"t00001092@163.com"
     }
     url="http://api-t4.vova.com/en/v2/authentications"
     r=requests.post(url=url,
@@ -45,4 +45,4 @@ def test_reg():#
                     data=data,
                    )
     pprint.pprint(r.json())
-test_reg()
+ztest_reg()
