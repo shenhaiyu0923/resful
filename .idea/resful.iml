@@ -14,8 +14,12 @@
       <sourceFolder url="file://$MODULE_DIR$/vova_project/vova" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/z_python-stu1/测试" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/z_python-stu1/T2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vova_project/vova_resful" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/z_python-stu1/tpytest" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vova_project/app_test" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vova_project/移动测试/app_test" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.6 (env1)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.6" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">
@@ -23,10 +27,12 @@
     <option name="TEMPLATE_FOLDERS">
       <list>
         <option value="$MODULE_DIR$/a_web/demo/templates" />
+        <option value="$MODULE_DIR$/vova_project/app_test" />
       </list>
     </option>
   </component>
   <component name="TestRunnerService">
+    <option name="projectConfiguration" value="pytest" />
     <option name="PROJECT_TEST_RUNNER" value="pytest" />
   </component>
 </module>

@@ -43,11 +43,12 @@ class Duihuan:
     def zuanshi(self,uid,token):
         url='http://api-a1-t2.vova.com/en/v1/activity/freesale/crystalExchange'
         params={
+            "other": ";;0;46007;;;1;GMT+08:00;1;0",#非必传
             "access_token":token,
             "uid":uid,
         }
         data={
-            "exchange_id": 3,#兑换类型
+            "exchange_id": 2,#兑换类型
         }
         try:
             r=requests.post(url,headers=self.headers,params=params,

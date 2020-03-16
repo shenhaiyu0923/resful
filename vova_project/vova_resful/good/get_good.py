@@ -7,7 +7,6 @@ def download(path,d_time):
         os.makedirs(path)  # makedirs 创建文件时如果路径不存在会创建这个路径
     else:
         shutil.rmtree(path)#删除老文件夹
-        time.sleep(1)
         os.makedirs(path)  # makedirs 创建文件时如果路径不存在会创建这个路径
     os.getcwd()  # get current work direction.
     os.chdir(path)  # change direction.
