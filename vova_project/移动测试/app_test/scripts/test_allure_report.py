@@ -16,7 +16,7 @@ class TestAllureReport():
     # 添加测试步骤说明
     @allure.step("第二步")
     # 添加错误级别
-    @pytest.allure.severity(pytest.allure.severity_level.CRITICAL)
+    @allure.severity("CRITICAL")
     def test_b(self, data):
         print("test_b")
         # 添加描述信息
