@@ -17,9 +17,12 @@ def booksadd():#查询所有图书
     return r
 
 def bookone():#查询一个图书
-    url = 'http://127.0.0.1:8004/books/7'
+    params={
+        "id":1
+    }
+    url = 'http://127.0.0.1:8000/books/'
 
-    r=requests.get(url,)
+    r=requests.get(url,params=params)
     print(r.json())
     return r
 
@@ -44,7 +47,7 @@ def bookdel():#查询一个图书
 
 # books()#查询所有图书
 # booksadd()#增加图书
-# bookone()#查询一个图书
+bookone()#查询一个图书
 # bookput() #修改一个图书
 # bookdel()  #修改
 

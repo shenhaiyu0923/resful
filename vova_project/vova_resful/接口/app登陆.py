@@ -42,6 +42,22 @@ class Duihuan:
         # print(r1)
         # print(r1['data']['access_token'])
 
+    def denglu2(self):
+        url="http://api-t2.vova.com/en/v2/authentications"
+        headers={
+            "User-Agent":"Dalvik/2.1.0 (Linux; U; Android 6.0.1; VIVO X20 Build/V417IR) [,340fee311994e386,1583737416858-410961750665631264] lq-App Vova  android",
+        }
+        params={
+            "password":"96e79218965eb72c92a549dd5a330112",
+            "username":"ning@tetx.com",
+        }
+        r=requests.get(url,params=params,headers=headers)
+        return r.json()
+
+        # r1 = genglu()
+        # print(r1)
+        # print(r1['data']['access_token'])
+
     def zuanshi(self):
         headers={
             "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 6.0.1; VIVO X20 Build/V417IR) [,340fee311994e386,1583737416858-410961750665631264] lq-App Vova android",

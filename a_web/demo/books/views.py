@@ -56,10 +56,11 @@ class BookView(View):
     """
         获取单一和更新和删除
     """
-    def get(self, request, pk):
+    def get(self, request):
         # 1、查询数据对象
         try:
-            book = BookInfo.objects.get(id=pk)
+            id = request.GET.get('id')
+            book = BookInfo.objects.get(id=id)
 
         except:
             return JsonResponse({'error': '错误信息'}, status=400)

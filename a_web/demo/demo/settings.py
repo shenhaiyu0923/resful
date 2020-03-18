@@ -25,7 +25,7 @@ SECRET_KEY = '1lnhu!#*4z$&kt(mwzh@2^gqt5*xpxie(u6_n46mza$@p(a$la'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -143,13 +143,13 @@ STATIC_URL = '/static/'
 
 
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (#认证
-        'rest_framework.authentication.BasicAuthentication',   # 基本认证
-        'rest_framework.authentication.SessionAuthentication',  # session认证
-    ),
-    'DEFAULT_PERMISSION_CLASSES': (#权限
-        'rest_framework.permissions.IsAuthenticated',
-    ),
+    # 'DEFAULT_AUTHENTICATION_CLASSES': (#认证
+    #     'rest_framework.authentication.BasicAuthentication',   # 基本认证
+    #     'rest_framework.authentication.SessionAuthentication',  # session认证
+    # ),
+    # 'DEFAULT_PERMISSION_CLASSES': (#权限
+    #     'rest_framework.permissions.IsAuthenticated',
+    # ),
     'DEFAULT_THROTTLE_CLASSES': (#用户限流
         'rest_framework.throttling.AnonRateThrottle',
         'rest_framework.throttling.UserRateThrottle'

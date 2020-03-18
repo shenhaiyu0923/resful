@@ -2,14 +2,18 @@ from locust import HttpLocust,TaskSequence,task
 from random import randint
 
 class UserBehavior(TaskSequence):
-    @task(1)
-    def one_user(self):
-        i=randint(1,3)
-        self.client.get("books/{}".format(i))
-
     # @task(1)
-    # def all_user(self):
-    #     self.client.get("books_drf")
+    # def one_user(self):
+    #     i=randint(1,3)
+    #     self.client.get("books/{}".format(i))
+    #     # params={
+    #     #     "id":i,
+    #     # }
+    #     # self.client.get('books',params=params)
+
+    @task(2)
+    def all_user(self):
+        self.client.get("books_drf")
 
 class WebsiteUser(HttpLocust):
     task_set = UserBehavior
