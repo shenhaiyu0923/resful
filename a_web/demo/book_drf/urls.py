@@ -20,9 +20,9 @@ urlpatterns = [
     # url(r'^book_drf/(?P<pk>\d+)$', mixin_view.Book.as_view()),
     # url(r'^books_drf/(?P<pk>\d+)$', mixin_view.BookDRFView.as_view()),
 
-    url(r'^books_drf$', childmixin_view.Books.as_view()),
-    url(r'^book_drf/(?P<pk>\d+)$', childmixin_view.Book.as_view()),
-    url(r'^books_drf/(?P<pk>\d+)$', childmixin_view.BookDRFView.as_view()),
+    # url(r'^books_drf$', childmixin_view.Books.as_view()),
+    # url(r'^book_drf/(?P<pk>\d+)$', childmixin_view.Book.as_view()),
+    # url(r'^books_drf/(?P<pk>\d+)$', childmixin_view.BookDRFView.as_view()),
 
     # # ViewSet路由使用
     # url(r'^books_drf$', viewset_view.Books.as_view({'get':'list','post':'create',})),
@@ -32,9 +32,9 @@ urlpatterns = [
     # # GenericViewSet路由使用
     # url(r'^books_drf$', genericviewset_view.Books.as_view({'get': 'list', 'post': 'create', })),
     # url(r'^books_drf/(?P<pk>\d+)$',genericviewset_view.BookDRFView.as_view({'put': 'update', 'delete': 'destroy', 'get': 'retrieve'})),
-    # url(r'^books_drf/(?P<pk>\d+)/lastdata$', genericviewset_view.BookDRFView.as_view({'get': 'lastdata'})),
-
-    # ModelViewSet路由使用
+    # url(r'^books_drf/(?P<pk>\d+)/lastdata/$', genericviewset_view.BookDRFView.as_view({'get': 'lastdata'})),
+    #
+    # # ModelViewSet路由使用
     # url(r'^books_drf/$', modelviewset_view.Books.as_view({'get': 'list', 'post': 'create', })),
     # url(r'^books_drf/(?P<pk>\d+)/$',modelviewset_view.Books.as_view({'put': 'update', 'delete': 'destroy', 'get': 'retrieve'})),
     # url(r'^books_drf/(?P<pk>\d+)/lastdata$', modelviewset_view.Books.as_view({'get': 'lastdata'})),
@@ -46,8 +46,8 @@ urlpatterns = [
 # print(router.urls)# 打印路由
 # urlpatterns += router.urls
 
-# # 自定义生成路由,要和视图集配合使用
-# router = DefaultRouter()
-# router.register('books_drf', modelviewset_view2.Books,basename='books')
-# print(router.urls)# 打印路由
-# urlpatterns += router.urls
+# 自定义生成路由,要和视图集配合使用
+router = DefaultRouter()
+router.register('books_drf', modelviewset_view2.Books,basename='books')
+print(router.urls)# 打印路由
+urlpatterns += router.urls

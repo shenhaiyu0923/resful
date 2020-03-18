@@ -40,9 +40,7 @@ class Book(GenericAPIView):
 
 
 class BookDRFView(GenericAPIView):
-    """
-        获取单一和更新和删除
-    """
+
     queryset = BookInfo.objects.all()  #指定当前类视图使用的查询集数据
     serializer_class = BookSerializer  #指定当前类视图使用的序列化器
 

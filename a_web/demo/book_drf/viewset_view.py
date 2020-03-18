@@ -30,9 +30,7 @@ class Books(ViewSet):
         return Response(ser.data)
 
 class BookDRFView(ViewSet):
-    """
-        获取单一和更新和删除
-    """
+
     def update(self, request, pk):
         # 1、获取前端数据
         # data = request.body.decode()

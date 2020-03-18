@@ -19,8 +19,9 @@
       <sourceFolder url="file://$MODULE_DIR$/vova_project/app_test" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/vova_project/移动测试/app_test" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/a_web/django_restful" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/a_web/django_restful/django_restful" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.6 (env1)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.6" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">
@@ -33,6 +34,7 @@
     </option>
   </component>
   <component name="TestRunnerService">
+    <option name="projectConfiguration" value="pytest" />
     <option name="PROJECT_TEST_RUNNER" value="pytest" />
   </component>
 </module>

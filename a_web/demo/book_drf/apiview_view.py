@@ -42,9 +42,7 @@ class Book(APIView):
 
 
 class BookDRFView(APIView):
-    """
-        获取单一和更新和删除
-    """
+
     def put(self, request, pk):
         # 1、获取前端数据
         # data = request.body.decode()
