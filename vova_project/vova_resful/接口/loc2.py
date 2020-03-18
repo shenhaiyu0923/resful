@@ -11,7 +11,7 @@ class UserBehavior(TaskSequence):
             "password": "88888888",
         }
         url = 'http://127.0.0.1:8001/api/mgr/signin'
-        r = self.client.get(url,  data=data)
+        r = self.client.post(url,  data=data)
         pprint(r.json())
 
 class WebsiteUser(HttpLocust):
@@ -21,5 +21,5 @@ class WebsiteUser(HttpLocust):
 
 if __name__ == "__main__":
     import os
-    os.system("locust -f loc.py --web-host=127.0.0.1")
+    os.system("locust -f loc2.py --web-host=127.0.0.1")
 

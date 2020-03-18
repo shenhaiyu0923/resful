@@ -7,5 +7,5 @@ while True:
     print("  "
           +str(psutil.cpu_percent())+"%        "
           +str(psutil.virtual_memory().percent)+"%        "
-          +str(psutil.disk_usage("c:\\").percent)+"%        "
+         # +str(psutil.disk_usage("c:\\").percent)+"%        " #windows下可以
           )
